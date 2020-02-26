@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Tavux\IBMCloudObjectStorage\Laravel;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
@@ -29,6 +29,10 @@ class IbmCloudObjectStorageProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->publishes([
+            __DIR__ . '/../config/qonto.php' => config_path('qonto.php'),
+        ], ['config', 'qonto']);
+
         Storage::extend('ibm-cos', function($app, $config) {
             return new Filesystem(new IbmCosAdapter($config, $config['bucket']));
         });
