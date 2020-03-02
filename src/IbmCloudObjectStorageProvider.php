@@ -29,9 +29,9 @@ class IbmCloudObjectStorageProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
+        /*$this->publishes([
             __DIR__ . '/../config/filesystems.php' => config_path('filesystems.php'),
-        ], ['config', 'ibm-cos']);
+        ], ['config', 'ibm-cos']);*/
 
         Storage::extend('ibm-cos', function($app, $config) {
             return new Filesystem(new IbmCosAdapter($config, $config['bucket']));
