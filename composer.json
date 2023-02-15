@@ -2,7 +2,7 @@
     "name": "tavux/laravel-ibm-cos",
     "license": "MIT",
     "description": "Laravel Custom Filesystem for IBM Cloud Object Storage",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "homepage": "https://github.com/tavux/laravel-ibm-cos",
     "authors": [
         {
@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=5.6.0",
-        "tavux/flysystem-ibm-cos": "1.0.0"
+        "tavux/flysystem-ibm-cos": "^1.0.1"
     },
     "autoload": {
         "psr-4": {
